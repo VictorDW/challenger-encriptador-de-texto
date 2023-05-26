@@ -1,0 +1,374 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+
+    --color-primario: #0A3871 ;
+    --color-segundario: #f3f5fc;
+    --color-texto-secundario: #495057;
+    --color-blanco: #fff;
+    --color-negro: black;
+    --fuente-text: 'Inter', sans-serif;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size:  16px;
+}
+
+.contenedor {
+    width: 373px;;
+    background-color: var(--color-segundario);
+}
+
+
+/*Contenedor que tiene lo principal*/
+.conte-main {
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Estilos para le logo*/
+.conte-main .logo {
+    height: 96px;
+    background-image: url("./Logo/alura.svg");
+    background-repeat: no-repeat;
+    background-size:  32px 48px;
+    margin: 15px 0 0 15px ;
+}
+
+/*
+* Estilos para el contenedor donde estan el textarea
+* y el contenedor de los botones
+*/
+
+.conte-main .conte-texto{
+    min-height: 474px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Estilos para el textareas */
+
+.conte-texto .input-texto {
+    margin: 0px 16px;
+    min-height: 300px;
+    font-size: 32px;
+    font-family: var(--fuente-text);
+    font-weight: 400;
+    color: var(--color-primario);
+    outline: none;
+    background-color: #f3f5fc;
+    border: 0;
+    resize:none;
+
+}
+
+/* Estilos para le contenedor que tiene el contenido a los botones Encriptar y Desencriptar y
+* el mensaje
+*/
+
+.conte-texto .conte-btn-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-height: 176px;
+}
+
+.conte-btn-texto span {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-left: 15px;
+}
+/* Estilos para el texto que acompaña los botones*/
+
+.conte-btn-texto p {
+    height: 18px;
+    font-family: var(--fuente-text);
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--color-texto-secundario);
+    margin-left: 5px;
+}
+
+.conte-btn-texto .png-exclamacion {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-image: url("./Icon/bi_exclamation-circle-fill.png");
+}
+
+/* Estilos para el contenedor de los botones*/
+
+.conte-btn-texto .conte-btn {
+    min-height: 158px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Estilo general de todos los botones*/
+
+input[type="button"] {
+    width: 343px;
+    padding: 20px 25px;
+    border-radius: 24px;
+    font-family: var(--fuente-text);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* Estilo para el boton principal*/
+
+.conte-btn .btn-principal {
+    color: var(--color-blanco);
+    background-color: var(--color-primario);
+    border: none;
+}
+
+/* Estilo para los botones secundarios*/
+
+.conte-btn .btn-secundario, .conte-mjsEncriptado .btn-secundario {
+    color: var(--color-primario);
+    border: 1px solid var(--color-primario);
+    box-sizing: border-box;
+    background-color: transparent;
+ }
+
+ /* Estilos del contenedor donde se muestra el resultado */
+ .conte-resultado {
+    min-height: 266px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 5px;
+ }
+ 
+ /* Estilos del contenedor que contiene la imagen 
+    y el contenedor informativo */
+
+.conte-resultado .conte-info-resultado {
+    min-height: 186px;
+    width: 327px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 2rem ;
+    background-color: var(--color-blanco);
+    box-shadow: 0px 24px 32px -8px rgba(0,0,0,0.2);
+   /* filter: drop-shadow(0px 24px 32px rgba(0,0,0,0.4));*/
+   
+}
+
+/* Estilos del contenedor que va a llevar la img  para el desktop */
+
+.conte-info-resultado .conte-img-info {
+    display:none;
+}
+
+/* Estilos del contenedor informativo */
+
+.conte-info-resultado .conte-msjInfo {
+
+    width: 327px;
+    height: 186px;
+    text-align: center;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/*  estilos del primer parafo informativo */
+
+.conte-msjInfo p:first-child {
+    font-family: var(--fuente-text);
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+
+}
+
+/* Estilos del segundo parrafo informativo */
+
+.conte-msjInfo p:last-child {
+    font-family: var(--fuente-text);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-texto-secundario);
+}
+
+/* Estilos del contenedor donde se muestra el mensaje encriptado */
+
+ .conte-resultado .conte-mjsEncriptado { 
+    width: 343px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 40px;
+    border-radius: 2rem ;
+    background-color: var(--color-blanco);
+    box-shadow: 0px 24px 32px -8px rgba(0,0,0,0.2);
+    display: none;
+ }
+
+/* Estilos del span donde se muestra el mensaje */
+
+.conte-mjsEncriptado .input-mjsEncriptado {
+    margin-top: 2rem;
+    width: 279px;
+    min-height: 50px;
+    font-size: 24px;
+    font-family: var(--fuente-text);
+    font-weight: 400;
+    color: var(--color-primario);
+    outline: none;
+    background-color: transparent;
+    border: 0;
+ }
+
+/* Aqui se redefinen los estilos para el boton pegar*/
+
+.conte-mjsEncriptado .btn-secundario {
+    width: 279px;
+    margin-bottom: 2rem;
+ }
+
+/* Estilos para el pie de pagina*/
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    margin-top: 1rem;
+}
+
+/* Estilos del parrafo */
+
+footer > p {
+    font-family: var(--fuente-text);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+
+/* Vista para tablet */
+
+
+@media (min-width: 768px) {
+
+    .contenedor {
+        width: 768px;
+    }
+
+    /*Estilos para le logo*/
+    .conte-main .logo {
+
+        height: 110px;
+        background-size:  32px 51px;
+        margin: 32px 0 0 32px ;
+    }
+
+    /*
+    * Estilos para el contenedor donde estan el textarea
+    * y el contenedor de los botones
+    */
+
+    .conte-main .conte-texto{
+        height: 615px;
+    }
+
+    .conte-texto .input-texto {
+        margin: 0px 2rem;
+        min-height: 500px;
+        font-size: 40px;
+    }
+
+    /* Estilos para le contenedor que tiene el contenido a los botones Encriptar y Desencriptar y
+    * el mensaje
+    */
+
+    .conte-texto .conte-btn-texto {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        min-height: 110px;
+    }
+
+    .conte-btn-texto span {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-left: 40px;
+    }
+
+    /* Estilos para el contenedor de los botones*/
+
+    .conte-btn-texto .conte-btn {
+        min-height: 80px;
+        flex-direction: row;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    /* Estilo general de todos los botones*/
+
+    input[type="button"] {
+        width: 332px;
+    }
+
+    /* Estilos del contenedor donde se muestra el resultado */
+    .conte-resultado {
+        min-height: 266px;
+    }
+    
+    /* Estilos del contenedor que contiene la imagen 
+        y el contenedor informativo */
+
+    .conte-resultado .conte-info-resultado {
+        min-height: 186px;
+        width: 688px;
+    }
+
+    /* Estilos del contenedor informativo */
+
+    .conte-info-resultado .conte-msjInfo {
+
+        width: 100%;
+        height: 133px;
+    }
+
+    /* Estilos del contenedor donde se muestra el mensaje encriptado */
+
+    .conte-resultado .conte-mjsEncriptado { 
+        width: 688px;     
+    }
+
+    /* Estilos del span donde se muestra el mensaje */
+
+    .conte-mjsEncriptado .input-mjsEncriptado {
+        width: 624px;
+    }
+
+    /* Aqui se redefinen los estilos para el boton pegar*/
+
+    .conte-mjsEncriptado .btn-secundario {
+        width: 624px;
+    }
+
+    footer {
+        margin-top:  2rem;
+    }
+
+}
