@@ -362,3 +362,144 @@ footer > p {
     }
 
 }
+
+/* Vista para Desktop*/
+
+@media (min-width: 1025px) {
+
+    .contenedor {
+        width: auto;
+        height: 1024px;
+    }
+
+    /*Contenedor que tiene lo principal*/
+    .conte-main {
+
+        width: 100%;
+        height: 974px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+
+    /*Estilos para le logo*/
+    .conte-main .logo {
+
+        height: 51px;
+        width: 120px;
+        background-size:  32px 51px;
+        margin: 32px 0 0 0;
+        background-position: center;
+    }
+
+    /*
+    * Estilos para el contenedor donde estan el textarea
+    * y el contenedor de los botones
+    */
+
+    .conte-main .conte-texto{
+        
+        width: 680px;
+        height: 100%;
+        justify-content: space-evenly;
+        gap: 5rem;
+    }
+
+    .conte-texto .input-texto {
+        margin: 168px 0 0 0;
+        min-height: 500px;
+        font-size: 32px;
+    }
+
+    /* Estilos para le contenedor que tiene el contenido a los botones Encriptar y Desencriptar y
+    * el mensaje
+    */
+
+    .conte-texto .conte-btn-texto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        min-height: 110px;
+    }
+
+    .conte-btn-texto span {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    /* Estilos para el contenedor de los botones*/
+
+    .conte-btn-texto .conte-btn {
+        min-height: 80px;
+        flex-direction: row;
+        justify-content: center;
+        gap: 24px;
+        width: calc(100%);
+    }
+
+    /* Estilo general de todos los botones*/
+
+    input[type="button"] {
+        width: 100%;
+        padding: 23.5px 25px;
+    }
+
+    /* Estilos del contenedor donde se muestra el resultado */
+    .conte-resultado {
+
+        min-height: 944px;
+        max-width: 420px;
+        margin-left: 10px;
+    }
+    
+    /* Estilos del contenedor que contiene la imagen 
+        y el contenedor informativo */
+
+    .conte-resultado .conte-info-resultado {
+        min-height: 944px;
+        width: calc(100%);
+        justify-content: center;
+        display: flex;
+    }
+
+    .conte-info-resultado .conte-img-info {
+        height: 304px;
+        display: block;
+        width: 100%;
+        padding:  2rem;
+        box-sizing: border-box;
+        border: 1px solid var(--color-negro);
+    }
+
+    /* Estilos del contenedor informativo */
+
+    .conte-info-resultado .conte-msjInfo {
+        height: 133px;
+    }
+
+    /* Estilos del contenedor donde se muestra el mensaje encriptado */
+
+    .conte-resultado .conte-mjsEncriptado { 
+        width: calc(100%); 
+        min-height: 944px;
+        justify-content: space-between;
+        margin-top: 0;
+        display: none; 
+    }
+    
+    footer {
+        margin-top: 0;
+    }
+
+    footer > p {
+
+        font-size: 1rem;        
+    }
+
+}
