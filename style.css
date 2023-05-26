@@ -84,7 +84,7 @@
     display: flex;
     justify-content: start;
     align-items: center;
-    margin-left: 15px;
+    margin-left: 20px;
 }
 /* Estilos para el texto que acompaña los botones*/
 
@@ -117,7 +117,7 @@
 /* Estilo general de todos los botones*/
 
 input[type="button"] {
-    width: calc(100% - 32px);
+    width: calc(100% - 42px);
     padding: 20px 25px;
     border-radius: 24px;
     font-family: var(--fuente-text);
@@ -269,7 +269,7 @@ footer > p {
 @media (min-width: 768px) {
 
     .contenedor {
-        width: 768px;
+        width: auto;
     }
 
     /*Estilos para le logo*/
@@ -277,7 +277,7 @@ footer > p {
 
         height: 110px;
         background-size:  32px 51px;
-        margin: 32px 0 0 32px ;
+        margin: 32px 0 0 39px ;
     }
 
     /*
@@ -290,7 +290,7 @@ footer > p {
     }
 
     .conte-texto .input-texto {
-        margin: 0px 2rem;
+        margin: 0px 39px;
         min-height: 500px;
         font-size: 40px;
     }
@@ -302,6 +302,8 @@ footer > p {
     .conte-texto .conte-btn-texto {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         gap: 10px;
         min-height: 110px;
     }
@@ -311,6 +313,7 @@ footer > p {
         justify-content: start;
         align-items: center;
         margin-left: 40px;
+        width: 95%;
     }
 
     /* Estilos para el contenedor de los botones*/
@@ -320,12 +323,13 @@ footer > p {
         flex-direction: row;
         justify-content: center;
         gap: 25px;
+        width: calc(100% - 78px);
     }
 
     /* Estilo general de todos los botones*/
 
     input[type="button"] {
-        width: 332px;
+        width: 100%;
     }
 
     /* Estilos del contenedor donde se muestra el resultado */
@@ -338,33 +342,19 @@ footer > p {
 
     .conte-resultado .conte-info-resultado {
         min-height: 186px;
-        width: 688px;
+        width: calc(100% - 80px);
     }
 
     /* Estilos del contenedor informativo */
 
     .conte-info-resultado .conte-msjInfo {
-
-        width: 100%;
         height: 133px;
     }
 
     /* Estilos del contenedor donde se muestra el mensaje encriptado */
 
     .conte-resultado .conte-mjsEncriptado { 
-        width: 688px;     
-    }
-
-    /* Estilos del span donde se muestra el mensaje */
-
-    .conte-mjsEncriptado .input-mjsEncriptado {
-        width: 624px;
-    }
-
-    /* Aqui se redefinen los estilos para el boton pegar*/
-
-    .conte-mjsEncriptado .btn-secundario {
-        width: 624px;
+        width: calc(100% - 80px);     
     }
 
     footer {
