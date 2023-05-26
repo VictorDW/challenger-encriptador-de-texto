@@ -156,8 +156,8 @@ input[type="button"] {
     y el contenedor informativo */
 
 .conte-resultado .conte-info-resultado {
-    min-height: calc(100% - 48px);
-    width: 327px;
+    min-height: 186px;
+    width: calc(100% - 48px);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
