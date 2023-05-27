@@ -474,7 +474,10 @@ footer > p {
         width: 100%;
         padding:  2rem;
         box-sizing: border-box;
-        border: 1px solid var(--color-negro);
+        background-image: url("./img/undraw_the_search_s0xf.svg");
+        background-position: center;
+        background-size: 336px 304px;
+        background-repeat: no-repeat;
     }
 
     /* Estilos del contenedor informativo */
