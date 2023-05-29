@@ -262,32 +262,43 @@ input[type="button"] {
     transition: display 0.4s ease-in-out;
     display: none;
     animation: aparecer 1s ease-in-out;
-    /*position: relative;*/
+    position: relative;
  }
 
  
 
- /*.conte-mjsEncriptado::before{
+ .conte-mjsEncriptado::before{
     content:"copiado";
     position: absolute;
     bottom: 110px;
     right: 50px;
     background-color: var(--color-primario);
-    padding: 8px 10px;
+    padding: 8px 16px;
     border-radius: 20px;
     color: var(--color-blanco);
- }*/
+    display: none;
+ }
 
- /*.conte-mjsEncriptado::after {
+ .conte-mjsEncriptado::after {
     content: "";
     position: absolute;
-    bottom: 80px;
-    right: 50px;
-    width: 10px;
-    height: 18px;
+    bottom: 106px;
+    right: 80px;
+    width: 12px;
+    height: 12px;
     background-color: var(--color-primario);
-    transform: rotate(48deg);
- }*/
+    transform: rotate(46deg);
+    display: none;
+    
+ }
+
+
+ .conte-mjsEncriptado.active::before, 
+ .conte-mjsEncriptado.active::after {
+    display: block;
+    
+ }
+
 
 
 /* Estilos del span donde se muestra el mensaje */
@@ -310,7 +321,6 @@ input[type="button"] {
 .conte-mjsEncriptado .btn-secundario {
     width: calc(100% - 64px);
     margin-bottom: 2rem;
-    position: relative;
  }
 
 

@@ -71,12 +71,22 @@ btn_copiar.addEventListener("click", () => {
 
     navigator.clipboard.writeText(input_mjsEncriptado.innerText)
     .then(function() {
+      
       console.log('Texto copiado al portapapeles: ' + input_mjsEncriptado.innerText);
+      
+      conte_mjsEncriptado.classList.add("active");
+
+      setTimeout(()=> {
+
+        conte_mjsEncriptado.classList.remove("active");
+      },2500);
     })
     .catch(function(error) {
       console.error('Error al copiar el texto: ', error);
     });
 });
+
+
 
 // Funciones que realizan la logica de encriptar y desencriptar el mensaje
 
