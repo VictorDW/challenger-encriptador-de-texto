@@ -131,7 +131,17 @@ input[type="button"] {
     color: var(--color-blanco);
     background-color: var(--color-primario);
     border: none;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
 }
+
+.conte-btn .btn-principal:hover {
+    color: var(--color-primario);
+    border: 1px solid var(--color-primario);
+    box-sizing: border-box;
+    background-color: transparent;
+}
+
 
 /* Estilo para los botones secundarios*/
 
@@ -140,7 +150,16 @@ input[type="button"] {
     border: 1px solid var(--color-primario);
     box-sizing: border-box;
     background-color: transparent;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
  }
+
+ .conte-btn .btn-secundario:hover, .conte-mjsEncriptado .btn-secundario:hover {
+    color: var(--color-blanco);
+    background-color: var(--color-primario);
+    border: none;
+ }
+
 
  /* Estilos del contenedor donde se muestra el resultado */
  .conte-resultado {
@@ -156,6 +175,7 @@ input[type="button"] {
     y el contenedor informativo */
 
 .conte-resultado .conte-info-resultado {
+    
     min-height: 186px;
     width: calc(100% - 48px);
     display: flex;
@@ -167,7 +187,27 @@ input[type="button"] {
     background-color: var(--color-blanco);
     box-shadow: 0px 24px 32px -8px rgba(0,0,0,0.2);
    /* filter: drop-shadow(0px 24px 32px rgba(0,0,0,0.4));*/
-   
+   animation: aparecer 1s ease-in-out;
+   /*transition: display 0.4s ease-in-out;*/
+}
+
+/* animación que le da efecto a los contenedores info-resultado y  msjEncriptado*/
+@keyframes aparecer {
+    0%{
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 /* Estilos del contenedor que va a llevar la img  para el desktop */
@@ -219,9 +259,13 @@ input[type="button"] {
     border-radius: 2rem ;
     background-color: var(--color-blanco);
     box-shadow: 0px 24px 32px -8px rgba(0,0,0,0.2);
+    transition: display 0.4s ease-in-out;
     display: none;
+    animation: aparecer 1s ease-in-out;
     /*position: relative;*/
  }
+
+ 
 
  /*.conte-mjsEncriptado::before{
     content:"copiado";
