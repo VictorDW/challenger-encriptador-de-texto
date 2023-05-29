@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="encriptar.js"></script>
     <title>Encriptador de texto</title>
 </head>
 <body>
@@ -15,7 +14,7 @@
                 
             </div>
             <div  class="conte-texto">
-                <textarea  name="input-texto" class="input-texto">Ingrese el texto aqui</textarea>
+                <textarea  name="input-texto" class="input-texto" id="input-Texto">Ingrese el texto aqui</textarea>
                 <div class="conte-btn-texto">
                     <span>
                         <i class="png-exclamacion"></i>
@@ -23,30 +22,31 @@
                     </span>
                     
                     <div class="conte-btn">
-                        <input type="button" name="btn-principal" class="btn-principal" value="Encriptar"/>
-                        <input type="button" name="btn-secundario" class="btn-secundario" value="Desencriptar" />
+                        <input type="button" id="btn-encriptar" name="btn-principal" class="btn-principal" value="Encriptar"/>
+                        <input type="button" id="btn-desencriptar" name="btn-secundario" class="btn-secundario" value="Desencriptar" />
                     </div>
                 </div>
             </div>
             <div class="conte-resultado">
-                <div class="conte-info-resultado">
+                <div class="conte-info-resultado" id="conte-info-resultado">
                     <div class="conte-img-info"></div>
                     <div class="conte-msjInfo">
                         <p>Ningún mensaje fue encontrado</p>
                         <p>Ingrese el texto que desees encriptar o desencriptar</p>
                     </div>
                 </div>
-                <div class="conte-mjsEncriptado">
-                    <span class="input-mjsEncriptado">Lorem ipsum dolor sit amet consectetur adipiscing elit, 
+                <div class="conte-mjsEncriptado" id="conte-mjsEncriptado">
+                    <span class="input-mjsEncriptado" id="input-mjsEncriptado">Lorem ipsum dolor sit amet consectetur adipiscing elit, 
                         primis ultrices tempor purus bibendum odio cras a, 
                         netus auctor arcu dictumst dictum iaculis. Vivamus 
                         fermentum ornare porttitor primis leo semper per</span>
 
-                    <input type="button" name="btn-mjsEncriptado" class="btn-secundario" value="Copiar" >
+                    <input type="button" id="btn-copiar" name="btn-mjsEncriptado" class="btn-secundario" value="Copiar" >
                 </div>
             </div>
         </div>
         <footer><p>Copyrigth 2023 Desarrollado por Victor Agudelo</p></footer>
     </section>
 </body>
+<script src="encriptar.js"></script>
 </html>
