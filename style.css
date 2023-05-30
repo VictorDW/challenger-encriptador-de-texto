@@ -38,7 +38,7 @@
     background-image: url("./Logo/alura.svg");
     background-repeat: no-repeat;
     background-size:  32px 48px;
-    margin: 15px 0 0 15px ;
+    margin: 15px 0 0 20px ;
 }
 
 /*
@@ -50,13 +50,13 @@
     min-height: 474px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 15px;
 }
 
 /* Estilos para el textareas */
 
 .conte-texto .input-texto {
-    margin: 0px 16px;
+    margin: 0px 20px;
     min-height: 300px;
     font-size: 32px;
     font-family: var(--fuente-text);
@@ -266,6 +266,7 @@ input[type="button"] {
  }
 
  
+/* Estilos para el mensaje que informa que se ha copiado*/
 
  .conte-mjsEncriptado::before{
     content:"copiado";
@@ -273,6 +274,8 @@ input[type="button"] {
     bottom: 110px;
     right: 50px;
     background-color: var(--color-primario);
+    font-family: var(--fuente-text);
+    font-weight: 400;
     padding: 8px 16px;
     border-radius: 20px;
     color: var(--color-blanco);
@@ -292,6 +295,7 @@ input[type="button"] {
     
  }
 
+/* estilo para hacer visible el mensaje*/
 
  .conte-mjsEncriptado.active::before, 
  .conte-mjsEncriptado.active::after {
@@ -314,6 +318,7 @@ input[type="button"] {
     outline: none;
     background-color: transparent;
     border: 0;
+    overflow: auto;
  }
 
 /* Aqui se redefinen los estilos para el boton pegar*/
@@ -329,6 +334,7 @@ input[type="button"] {
 
 footer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 50px;
@@ -341,6 +347,8 @@ footer > p {
     font-family: var(--fuente-text);
     font-size: 12px;
     font-weight: 400;
+    padding: 2px;
+    text-align: center;
 }
 
 
@@ -440,6 +448,7 @@ footer > p {
 
     footer {
         margin-top:  2rem;
+        flex-direction: row;
     }
 
 }
